@@ -12,5 +12,6 @@ RUN pip install --upgrade awscli s3cmd python-magic ansible
 RUN cd /root && \
         git clone https://github.com/maishsk/boto.git && \
         cd boto && \
-        python setup.py install 
+        python setup.py install && \
+	cd .. && rm -rf boto
 
