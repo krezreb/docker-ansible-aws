@@ -27,6 +27,7 @@ RUN pip install awscli=="$AWSCLI_VERSION" && \
 # Install AWS ELASTIC BEANSTALK CLI
 RUN pip install awsebcli --upgrade
 
-
-
+RUN mkdir /root/.ssh 
+COPY ssh_config /root/.ssh/config
+RUN chmod -R 0400 /root/.ssh
 
